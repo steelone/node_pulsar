@@ -2,8 +2,6 @@ const fs = require('fs');
 const {fork} = require("child_process");
 const EventEmitter = require('events');
 
-
-
 const worker = fork('./pulsar.js');
 const workerEmitter = new EventEmitter();
 worker.on('message', msg => {
@@ -36,3 +34,14 @@ subscribePulsar("test1", handler, console.error);
 subscribePulsar("test2", handler, console.error);
 subscribePulsar("test3", handler, console.error);
 subscribePulsar("test4", handler, console.error);
+
+let counter = 0
+setInterval(() => {
+
+    /* CHECKING readFile or readdir */
+    fs.readdir('./', (err, data)=>{
+        console.log(data);
+    });
+
+    console.log(`-------------------------${counter++}----------------------------`);
+}, 1000);

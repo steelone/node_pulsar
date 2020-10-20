@@ -41,3 +41,10 @@ npm install
 ```sh
 npm run start
 ```
+
+### SENDING a message
+Go to Pulsar container CLI and send a message
+(SEE DOC https://pulsar.apache.org/docs/en/reference-cli-tools/#produce):
+```sh
+ ./pulsar-client produce test4 -m test
+```
