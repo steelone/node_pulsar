@@ -1,0 +1,14 @@
+{
+  "name": "node_pulsar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "pulsar-client": "^1.2.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
