@@ -1,5 +1,7 @@
 # ISSUE: if we have more than 3 active topics it blocks all async operations
-### NOTES: simple promises are well but http.get is NOT WORKING. 
+
+### NOTES: simple promises are well but http.get is NOT WORKING.
+
 ### PULSAR blocks async operations as readdir, readFile, http.get, etc.
 
 ## Main stack
@@ -27,11 +29,13 @@ https://pulsar.apache.org/docs/en/develop-cpp/#docsNav
 Not working and existing for Windows
 
 2. Start Pulsar
+
 ```sh
 docker-compose up -d
 ```
 
 3. Install dependencies
+
 ```sh
 npm install
 ```
@@ -43,8 +47,11 @@ npm run start
 ```
 
 ### SENDING a message
+
 Go to Pulsar container CLI and send a message
 (SEE DOC https://pulsar.apache.org/docs/en/reference-cli-tools/#produce):
+
 ```sh
- ./pulsar-client produce test4 -m test
+cd /pulsar/bin
+./pulsar-client produce test4 -m test
 ```
